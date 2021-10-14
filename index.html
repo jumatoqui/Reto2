@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="registers-registerc-registerm">
+        <div class="nav-buttons">
+          <button id="registersBtn" class="active">Registro Salones</button>
+          <button id="registercBtn" >Registro Clientes</button>
+          <button id="registermBtn" >Registro Mg</button>
+        </div>
+        <div class="form-form-form">
+          <form action="" id="registersform">
+            <label for="idSalones">ID</label>
+            <input type="number" id="idSalones" />
+            <label for="owner">OWNER</label>
+            <input type="text" id="owner" />
+            <label for="capacity">CAPACITY</label>
+            <input type="number" id="capacity" />
+            <label for="category_id">CATEGORY_ID</label>
+            <input type="number" id="category_id" />
+            <label for="namesalones">NAME</label>
+            <input type="text" id="namesalones" />
+            <button id="consultarsId">Detalle ID</button>&nbsp;
+            <button id="agregarsId">Agregar</button>&nbsp;
+            <button id="editarsId">Editar</button>&nbsp;
+            <button id="borrarsId">Borrar</button>&nbsp
+            <button id="consultarstId">Consultar</button>&nbsp;
+            <div id="resultadoS" class="table" ></div>
+          </form>
+          <form action="" id="registercform">
+            <label for="idclientes">ID</label>
+            <input type="number" id="idclientes" placeholder="ID" />
+            <label for="name">NAME</label>
+            <input type="text" id="name" placeholder="NAME" />
+            <label for="email">EMAIL</label>
+            <input type="text" id="email" placeholder="EMAIL" />
+            <label for="age">AGE</label>
+            <input type="number" id="age" placeholder="AGE" />
+            <button id="consultarcId">Detalle ID</button>&nbsp;
+            <button id="agregarcId">Agregar</button>&nbsp;
+            <button id="editarcId">Editar</button>&nbsp;
+            <button id="borrarcId">Borrar</button>&nbsp;
+            <button id="consultarctId">Consultar</button>&nbsp;
+            <div id="resultado" class="table" ></div>
+          </form>
+          <form action="" id="registermform">
+            <label for="idmensaje">ID</label>
+            <input type="number" id="idmensaje" placeholder="ID" />
+            <label for="messagetext">COMENTARIOS</label>
+            <input type="text" id="messagetext" placeholder="COMENTARIO" class="formc" />
+            <button id="consultarmId">Detalle ID</button>&nbsp;
+            <button id="agregarmId">Agregar</button>&nbsp;
+            <button id="editarmId">Editar</button>&nbsp;
+            <button id="borrarmId">Borrar</button>&nbsp;
+            <button id="consultarmtId">Consultar</button>&nbsp;
+            <div id="resultadoM" class="table" ></div>
+          </form>
+        </div>
+        <div id="forgot">
+          <a href="">forgot password?</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var registersBtn = document.getElementById("registersBtn");
+      var registercBtn = document.getElementById("registercBtn");
+      var registermBtn = document.getElementById("registermBtn");
+      var registersform = document.getElementById("registersform");
+      var registercform = document.getElementById("registercform");
+      var registermform = document.getElementById("registermform");
+      var forgot = document.getElementById("forgot");
+
+      registercBtn.onclick = function () {
+        registercform.style.left = "0px";
+        registercform.style.opacity = "1";
+        registersform.style.left = "-500px";
+        registersform.style.opacity = "0";
+        registermform.style.left = "-700px";
+        registermform.style.opacity = "1";
+        forgot.style.left = "-500px";
+        forgot.style.opacity = "0";
+        registercBtn.classList.add("active");
+        registercBtn.classList.remove("active");
+      };
+
+      registersBtn.onclick = function () {
+        registersform.style.left = "0px";
+        registersform.style.opacity = "1";
+        forgot.style.left = "0px";
+        forgot.style.opacity = "1";
+        registercform.style = "700px";
+        registercform.style.opacity = "1";
+        registermform.style.left = "-700px";
+        registermform.style.opacity = "1";
+        registersBtn.classList.add("active");
+        registersBtn.classList.remove("active");
+        registerform.style.opacity = "0";
+      };
+
+      registermBtn.onclick = function () {
+        registermform.style.left = "0px";
+        registermform.style.opacity = "1";
+        registercform.style.left = "500px";
+        registercform.style.opacity = "0";
+        registersform.style.left = "500px";
+        registersform.style.opacity = "0";
+        forgot.style.left = "500px";
+        forgot.style.opacity = "1";
+        registermBtn.classList.add("active");
+        registermBtn.classList.remove("active");
+      };
+
+
+     
+    </script>
+  </body>
+</html>
